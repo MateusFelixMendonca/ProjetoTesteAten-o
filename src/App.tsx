@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppStage, GrupoTeste, DispositivoData, SessionPayload, MetricasComportamentais, MetricasBiometricas } from './types';
+import { AppStage, GrupoTeste, DispositivoData, SessionPayload, MetricasComportamentais, MetricasBiometricas, generateUUID } from './types';
 import { WelcomeScreen } from './components/WelcomeScreen';
 import { ConditioningPhase } from './components/ConditioningPhase';
 import { CPTTest } from './components/CPTTest';
@@ -28,7 +28,7 @@ export default function App() {
 
   const handleCPTComplete = async (behavioral: MetricasComportamentais, biometric: MetricasBiometricas) => {
     const payload: SessionPayload = {
-      session_id: sessionId || crypto.randomUUID(),
+      session_id: sessionId || generateUUID(),
       created_at: new Date().toISOString(),
       grupo_teste: grupo,
       dispositivo: dispositivo || {

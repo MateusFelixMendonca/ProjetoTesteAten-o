@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GrupoTeste, DispositivoData } from '../types';
+import { GrupoTeste, DispositivoData, generateUUID } from '../types';
 import { Play, Shield, Smartphone, Eye, Sparkles, CheckCircle2, Sliders } from 'lucide-react';
 
 interface WelcomeScreenProps {
@@ -14,7 +14,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart, onOpenDas
 
   const handleStart = () => {
     if (!consentGiven) return;
-    const sessionId = crypto.randomUUID();
+    const sessionId = generateUUID();
     const dispositivo: DispositivoData = {
       user_agent: navigator.userAgent,
       screen_width: window.innerWidth,
