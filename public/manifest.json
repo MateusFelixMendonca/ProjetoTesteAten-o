@@ -1,0 +1,17 @@
+{
+  "name": "Quantização da Atenção PWA",
+  "short_name": "LabAtenção",
+  "description": "Estudo acadêmico sobre o impacto da mídia mobile na atenção sustentada e impulsividade.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
